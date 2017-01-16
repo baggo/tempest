@@ -1,0 +1,22 @@
+{
+  "name": "tempest",
+  "version": "1.0.0",
+  "description": "micro templating engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baggo/tempest.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baggo/tempest/issues"
+  },
+  "homepage": "https://github.com/baggo/tempest#readme",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}
