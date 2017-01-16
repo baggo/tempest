@@ -1,8 +1,8 @@
 var o = '{{', c = '}}'
 
-exports.parse = function (s) {
+exports.parse1 = function (s) {
   var p = [], e = [], f, l
-  while (1) {
+  for (;;) {
     f = s.indexOf(o)
     if (f < 0) break
     p.push(s.slice(0, f))

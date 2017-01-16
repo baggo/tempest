@@ -3,8 +3,8 @@ var tempest = require('..')
 
 var test = new Suite()
 
-test.add('parse small', function() {
-  tempest.parse('foo{{bar}}baz{{qux}}qix')
+test.add('parse1 small', function() {
+  tempest.parse1('foo{{bar}}baz{{qux}}qix')
 })
 
 test.add('parse2 small', function() {
