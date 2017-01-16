@@ -14,6 +14,19 @@ exports.parse = function (s) {
   return [p, e]
 }
 
+exports.parse2 = function (s) {
+  var p = [], e = [], f = s.indexOf(o), l
+  while (f >= 0) {
+    p.push(s.slice(0, f))
+    l = s.indexOf(c, f)
+    e.push(s.slice(f + 2, l))
+    s = s.slice(l + 2)
+    f = s.indexOf(o)
+  }
+  p.push(s)
+  return [p, e]
+}
+
 function c () {
 
 }
