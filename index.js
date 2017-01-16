@@ -1,6 +1,6 @@
 var o = '{{', c = '}}'
 
-exports.parse1 = function (s) {
+exports.parse = function (s) {
   var p = [], e = [], f, l
   for (;;) {
     f = s.indexOf(o)
@@ -9,19 +9,6 @@ exports.parse1 = function (s) {
     l = s.indexOf(c, f)
     e.push(s.slice(f + 2, l))
     s = s.slice(l + 2)
-  }
-  p.push(s)
-  return [p, e]
-}
-
-exports.parse2 = function (s) {
-  var p = [], e = [], f = s.indexOf(o), l
-  while (f >= 0) {
-    p.push(s.slice(0, f))
-    l = s.indexOf(c, f)
-    e.push(s.slice(f + 2, l))
-    s = s.slice(l + 2)
-    f = s.indexOf(o)
   }
   p.push(s)
   return [p, e]
