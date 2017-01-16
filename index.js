@@ -1,6 +1,6 @@
 var o = '{{', c = '}}'
 
-module.exports = function p (s) {
+exports.parse = function (s) {
   var p = [], e = [], f, l
   while (1) {
     f = s.indexOf(o)
