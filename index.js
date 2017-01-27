@@ -1,6 +1,10 @@
+module.exports = tempest
+tempest.compile = compile
+tempest.render = render
+
 var o = '{{', c = '}}'
 
-exports.parse = function (s) {
+function tempest (s) {
   var p = [], e = [], f, l
   for (;;) {
     f = s.indexOf(o)
@@ -14,10 +18,12 @@ exports.parse = function (s) {
   return [p, e]
 }
 
-function c () {
-
+function compile (t, d) {
+  var s = '', p = t[0], e = t[1], i = e.length
+  do { s = p[i] + (d[e[i]] || '') + s } while (i--)
+  return s
 }
 
-function r () {
-
+function render (s, d) {
+  return compile(tempest(s), d)
 }
