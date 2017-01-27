@@ -2,11 +2,8 @@ module.exports = tempest
 tempest.compile = compile
 tempest.render = render
 
-var o = '{{', c = '}}'
-
 function tempest (s) {
-  var p = [], e = [], f, l
-  for (;;) {
+  for (var p = [], e = [], f, l, o = '{{', c = '}}';;) {
     f = s.indexOf(o)
     if (f < 0) break
     p.push(s.slice(0, f))
@@ -19,9 +16,10 @@ function tempest (s) {
 }
 
 function compile (t, d) {
-  var s = '', p = t[0], e = t[1], i = e.length
-  do { s = p[i] + (d[e[i]] || '') + s } while (i--)
-  return s
+  for (var i = 0, p = t[0], e = t[1], l = e.length, s = ''; i < l; i++) {
+    s += p[i] + (d[e[i]] || '')
+  }
+  return s + p[i]
 }
 
 function render (s, d) {
