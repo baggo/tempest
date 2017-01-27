@@ -25,5 +25,5 @@ test('compile', (t) => {
 
 test('render', (t) => {
   t.plan(1)
-  t.is(render('foo{{bar}}baz{{qux}}qix', { bar: 'hello', qux: 'world' }), 'foohellobazworldqix', 'plain render')
+  t.is(render('foo{{bar}}baz{{qux}}qix', { bar: ' BAR ', qux: ' QUX ' }), 'foo BAR baz QUX qix', 'plain render')
 })
