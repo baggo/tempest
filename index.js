@@ -18,7 +18,7 @@ function tempest (s) {
 }
 
 function compile (t, d) {
-  for (var i = 0, p = t[0], e = t[1], l = e.length, s = ''; i < l; i++) {
+  for (var i = 0, s = '', p = t[0], e = t[1], l = e.length; i < l; i++) {
     s += p[i] + (d[e[i]] || '')
   }
   return s + p[i]
