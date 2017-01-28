@@ -1,17 +1,19 @@
+'use strict'
+
 module.exports = tempest
 tempest.compile = compile
 tempest.render = render
 
 function tempest (s) {
-  for (var p = [], e = [], f, l, o = '{{', c = '}}';;) {
+  for (var i = 0, p = [], e = [], f, l, o = '{{', c = '}}';;) {
     f = s.indexOf(o)
     if (f < 0) break
-    p.push(s.slice(0, f))
+    p[i++] = s.slice(0, f)
     l = s.indexOf(c, f)
-    e.push(s.slice(f + 2, l))
+    e[i] = s.slice(f + 2, l)
     s = s.slice(l + 2)
   }
-  p.push(s)
+  p[i] = s
   return [p, e]
 }
 
