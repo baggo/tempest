@@ -5,10 +5,10 @@ tempest.compile = compile
 tempest.render = render
 
 function tempest (s) {
-  for (var i = 0, p = [], e = [], f, l, o = '{{', c = '}}';;) {
+  for (var i = 0, p = [], e = [], f, l, o = '{{', c = '}}';; i++) {
     f = s.indexOf(o)
     if (f < 0) break
-    p[i++] = s.slice(0, f)
+    p[i] = s.slice(0, f)
     l = s.indexOf(c, f)
     e[i] = s.slice(f + 2, l)
     s = s.slice(l + 2)
