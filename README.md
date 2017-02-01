@@ -1,5 +1,5 @@
 # Tempest
-> Micro templating engine and [Pixie](https://github.com/jamen/tempest)'s little brother
+> Micro templating engine and [Pixie](https://github.com/jamen/pixie)'s little brother
 
 Tempest is a micro ([>40 LOC](./index.js)) template engine based around arrays and strings. You compile templates with a double mustache syntax.
 
