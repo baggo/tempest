@@ -11,7 +11,7 @@ var pixieRender = pixie.render
 
 var balanced = require('balanced-match')
 
-var s = 'foo{{bar}}baz{{qux}}qix' + 'foo{{bar}}baz{{qux}}qix' + 'foo{{bar}}baz{{qux}}qix' + 'foo{{bar}}baz{{qux}}qix'
+var s = 'foo{{bar}}baz{{qux}}qix', s = s + s + s + s
 var d = { bar: ' BAR ', qux: ' QUX ' }
 
 var t = tempest(s)
